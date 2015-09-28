@@ -1,0 +1,14 @@
+#!/bin/bash 
+ printf "\nWarning : This is Ankur's Script for local Eclipse instance only \n"
+if [ -n "$1" ]; then
+   open -n -a /Applications/Eclipse-Luna/eclipse --args -data /Users/ankur.saran/source/java$1 
+   printf "\n Starting instance $1 at /Users/ankur.saran/source/java$1\n"
+else
+    printf "\nPlease enter correct command =>\n                                          eclipse <which eclipse instance> \n\n Current list of Workspace available are as :  \n\n"
+    ls -latr  /Users/ankur.saran/source | grep java
+    
+    printf "\n\n=================================================================================================\n\n"
+
+      
+fi
+
